@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&family=Outfit:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
+  background: white;
+}
+
+.main-wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 2px solid #f7f8fd;
+}
+
+nav {
+  margin: 2.6em;
+  flex-grow: 1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  padding: 0 2.3em;
+}
+
+nav ul li a {
+  position: relative;
+
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: "Kumbh Sans";
+  color: #68707d;
+}
+
+nav ul li a:hover {
+  color: #1d2025;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  bottom: -43px;
+  height: 4px;
+  width: 0%;
+  background: #ff7d1a;
+  transition: all 1s;
+  z-index: 1;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.wishlist {
+  display: flex;
+  align-items: center;
+  gap: 1.4em;
+}
+
+/* ------------ Collection Box ------------- */
+
+section {
+  display: flex;
+}
+
+.card {
+  width: 200px;
+  height: 150px;
+  background-color: #646a74;
+  margin: 5em 2em;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.bagg {
+  font-size: 1rem;
+  font-family: "Kumbh Sans";
+  color: #000000;
+}
+
+.btn {
+  text-align: center;
+}
+/* Animation */
+
+.btn {
+  --color: #8d8383;
+  --color2: rgb(39, 9, 9);
+  padding: 0.8em 1.15em;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 0.3px solid var(--color);
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 17px;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  text-transform: uppercase;
+  color: var(--color);
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: 0.5s ease-out;
+  background-color: var(--color);
+}
+
+.btn::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+}
+
+.btn:hover {
+  color: var(--color2);
+}
+
+.btn:active {
+  filter: brightness(0.7);
+  transform: scale(0.98);
+}
