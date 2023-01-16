@@ -72,3 +72,40 @@ nav ul li a:hover::after {
   align-items: center;
   gap: 1.4em;
 }
+
+/*------------------- man section--------------- */
+
+section h1 {
+  text-align: center;
+  padding: 1em;
+}
+
+.product-box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5em;
+}
+
+.shop-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  gap: 1.5em;
+  padding: 2em 0;
+}
+
+/* .product-box {
+  position: relative;
+}
+
+.product-box:hover {
+  padding: 10px;
+  border: 1px solid black;
+  transition: 0.4s;
+} */
+
+.shirt {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}

@@ -75,86 +75,37 @@ nav ul li a:hover::after {
 
 /* ------------ Collection Box ------------- */
 
-section {
-  display: flex;
-}
-
-.card {
-  width: 200px;
-  height: 150px;
-  background-color: #646a74;
-  margin: 5em 2em;
-}
-
-.title {
-  display: flex;
-  flex-direction: column;
-}
-
-.bagg {
-  font-size: 1rem;
-  font-family: "Kumbh Sans";
-  color: #000000;
-}
-
-.btn {
+section h1 {
   text-align: center;
-}
-/* Animation */
-
-.btn {
-  --color: #8d8383;
-  --color2: rgb(39, 9, 9);
-  padding: 0.8em 1.15em;
-  background-color: transparent;
-  border-radius: 6px;
-  border: 0.3px solid var(--color);
-  transition: 0.5s;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  z-index: 1;
-  font-weight: 300;
-  font-size: 17px;
-  font-family: "Roboto", "Segoe UI", sans-serif;
-  text-transform: uppercase;
-  color: var(--color);
+  padding: 1em;
 }
 
-.btn::after,
-.btn::before {
-  content: "";
-  display: block;
-  height: 100%;
+.product-box img {
   width: 100%;
-  transform: skew(90deg) translate(-50%, -50%);
-  position: absolute;
-  inset: 50%;
-  left: 25%;
-  z-index: -1;
-  transition: 0.5s ease-out;
-  background-color: var(--color);
+  height: auto;
+  margin-bottom: 0.5em;
 }
 
-.btn::before {
-  top: -50%;
-  left: -25%;
-  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+.shop-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  gap: 1.5em;
+  padding: 2em 0;
 }
 
-.btn:hover::before {
-  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+/* .product-box {
+  position: relative;
 }
 
-.btn:hover::after {
-  transform: skew(45deg) translate(-50%, -50%);
-}
+.product-box:hover {
+  padding: 10px;
+  border: 1px solid black;
+  transition: 0.4s;
+} */
 
-.btn:hover {
-  color: var(--color2);
-}
-
-.btn:active {
-  filter: brightness(0.7);
-  transform: scale(0.98);
+.shirt {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
 }
