@@ -79,6 +79,7 @@ footer {
 }
 .maincontact {
   text-align: center;
+  margin: 2em 0;
 }
 .contractform {
   margin-top: 2em;
@@ -91,6 +92,7 @@ footer {
 .titlecontact {
   display: flex;
   justify-content: space-evenly;
+  background-color: rgba(121, 113, 113, 0.397);
 }
 
 .right-contat {
